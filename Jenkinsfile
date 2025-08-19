@@ -46,7 +46,7 @@ pipeline {
                 sh """
                     FRONTEND_IMAGE=${FRONTEND_IMAGE}:${BUILD_NUMBER} \
                     BACKEND_IMAGE=${BACKEND_IMAGE}:${BUILD_NUMBER} \
-                    docker compose down && docker compose up -d --build
+                    docker-compose down && docker-compose up -d --build
                 """
             }
         }
