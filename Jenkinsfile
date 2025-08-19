@@ -16,7 +16,7 @@ pipeline {
         stage("Build Frontend Image") {
             steps {
                 dir('frontend') {
-                    sh "docker build -t ${FRONTEND_IMAGE}:${BUILD_NUMBER} ./mern/frontend"
+                    sh "docker build -t ${FRONTEND_IMAGE}:${BUILD_NUMBER} ./mern"
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
         stage("Build Backend Image") {
             steps {
                 dir('backend') {
-                    sh "docker build -t ${BACKEND_IMAGE}:${BUILD_NUMBER} ./mern/backend"
+                    sh "docker build -t ${BACKEND_IMAGE}:${BUILD_NUMBER} ./mern"
                 }
             }
         }
