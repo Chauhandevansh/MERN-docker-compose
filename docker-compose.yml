@@ -36,3 +36,4 @@ services:
 networks:
   tier-network:
     driver: bridge
+    name: tier-network
